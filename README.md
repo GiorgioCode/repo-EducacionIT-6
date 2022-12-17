@@ -10,19 +10,19 @@ Material desarrollado para el curso "JavaScript desde Cero" de EducaciónIT
 
 # CLASE 01 - Introducción, Tipos de datos, Variables y Operadores.
 
-[![VER CODIGO](https://tutoriasjs.netlify.app/boton_vercodigo.png)](https://github.com/GiorgioCode/repo-educacionIT-finde/tree/main/CLASE_01) [![DESCARGAR PRESENTACIÓN](https://raw.githubusercontent.com/GiorgioCode/repo-educacionIT-finde/main/boton_diapositiva.png?token=GHSAT0AAAAAABYJWQ5N6CK2LUWKAMIMLJQCYZRBTFA)](https://github.com/GiorgioCode/repo-educacionIT-finde/blob/main/CLASE_01/CLASE1_JSDC_J_PAEZ.pptx?raw=true)
+[![VER CODIGO](https://tutoriasjs.netlify.app/boton_vercodigo.png)](https://github.com/GiorgioCode/repo-educacionIT-finde/tree/main/CLASE_01) [![DESCARGAR PRESENTACIÓN](https://raw.githubusercontent.com/GiorgioCode/repo-EducacionIT-6/main/boton_diapositiva.png?token=GHSAT0AAAAAABYJWQ5N6CK2LUWKAMIMLJQCYZRBTFA)](https://github.com/GiorgioCode/repo-EducacionIT-6/blob/main/CLASE_01/CLASE1_JSDC_J_PAEZ.pptx?raw=true)
 
 ---
 
 # CLASE 02 - Control de flujo, Ciclos e Iteraciones.
 
-[![VER CODIGO](https://tutoriasjs.netlify.app/boton_vercodigo.png)](https://github.com/GiorgioCode/repo-educacionIT-finde/tree/main/CLASE_02) [![DESCARGAR PRESENTACIÓN](https://raw.githubusercontent.com/GiorgioCode/repo-educacionIT-finde/main/boton_diapositiva.png?token=GHSAT0AAAAAABYJWQ5N6CK2LUWKAMIMLJQCYZRBTFA)](https://github.com/GiorgioCode/repo-educacionIT-finde/blob/main/CLASE_02/CLASE2_JSDC_J_PAEZ.pptx?raw=true)
+[![VER CODIGO](https://tutoriasjs.netlify.app/boton_vercodigo.png)](https://github.com/GiorgioCode/repo-educacionIT-finde/tree/main/CLASE_02) [![DESCARGAR PRESENTACIÓN](https://raw.githubusercontent.com/GiorgioCode/repo-EducacionIT-6/main/boton_diapositiva.png?token=GHSAT0AAAAAABYJWQ5N6CK2LUWKAMIMLJQCYZRBTFA)](https://github.com/GiorgioCode/repo-EducacionIT-6/blob/main/CLASE_02/CLASE2_JSDC_J_PAEZ.pptx?raw=true)
 
 ---
 
 # CLASE 03 - Objeto Date y manipulación de DOM
 
-[![VER CODIGO](https://tutoriasjs.netlify.app/boton_vercodigo.png)](https://github.com/GiorgioCode/repo-educacionIT-finde/tree/main/CLASE_03) [![DESCARGAR PRESENTACIÓN](https://raw.githubusercontent.com/GiorgioCode/repo-educacionIT-finde/main/boton_diapositiva.png?token=GHSAT0AAAAAABYJWQ5N6CK2LUWKAMIMLJQCYZRBTFA)](https://github.com/GiorgioCode/repo-educacionIT-finde/blob/main/CLASE_03/CLASE3_JSDC_J_PAEZ.pptx?raw=true)
+[![VER CODIGO](https://tutoriasjs.netlify.app/boton_vercodigo.png)](https://github.com/GiorgioCode/repo-educacionIT-finde/tree/main/CLASE_03) [![DESCARGAR PRESENTACIÓN](https://raw.githubusercontent.com/GiorgioCode/repo-EducacionIT-6/main/boton_diapositiva.png?token=GHSAT0AAAAAABYJWQ5N6CK2LUWKAMIMLJQCYZRBTFA)](https://github.com/GiorgioCode/repo-EducacionIT-6e/blob/main/CLASE_03/CLASE3_JSDC_J_PAEZ.pptx?raw=true)
 
 ---
 
