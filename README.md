@@ -20,6 +20,12 @@ Material desarrollado para el curso "JavaScript desde Cero" de EducaciónIT
 
 ---
 
+# CLASE 03 - Objeto Date y manipulación de DOM
+
+[![VER CODIGO](https://tutoriasjs.netlify.app/boton_vercodigo.png)](https://github.com/GiorgioCode/repo-educacionIT-finde/tree/main/CLASE_03) [![DESCARGAR PRESENTACIÓN](https://raw.githubusercontent.com/GiorgioCode/repo-educacionIT-finde/main/boton_diapositiva.png?token=GHSAT0AAAAAABYJWQ5N6CK2LUWKAMIMLJQCYZRBTFA)](https://github.com/GiorgioCode/repo-educacionIT-finde/blob/main/CLASE_03/CLASE3_JSDC_J_PAEZ.pptx?raw=true)
+
+---
+
 ![HEADER](https://raw.githubusercontent.com/GiorgioCode/repo-educacionIT-semana/main/material_adicional.jpg)
 
 Material recomendado para repaso de conceptos de HTML:

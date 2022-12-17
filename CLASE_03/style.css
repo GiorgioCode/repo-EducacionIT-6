@@ -1,0 +1,20 @@
+.titulo {
+    text-align: center;
+}
+
+.fondo_azul {
+    background-color: blue;
+}
+
+.letra_grande_blanca {
+    font-size: xx-large;
+    color: azure;
+    margin: 2rem;
+}
+
+.estilo_fruta {
+    color: brown;
+    font-size: large;
+    margin-left: 2rem;
+    background-color: burlywood;
+}
