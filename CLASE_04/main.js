@@ -159,3 +159,20 @@ var descuento = precioProducto * 0.10
 var nuevoPrecio = RESTAR(SUMAR(precioProducto, iva(precioProducto)), descuento) 
 console.log(nuevoPrecio)
 
+//ALMACENAR ARRAY EN LOCALSTORAGE
+
+const listado = [{ id: 1,  producto: "Arroz", precio: 125 },
+                  {  id: 2,  producto: "Fideo", precio: 70 },
+                  {  id: 3,  producto: "Pan"  , precio: 50},
+                  {  id: 4,  producto: "Flan" , precio: 100}];
+
+
+// o almacenar array completo
+localStorage.setItem("listaProductos", JSON.stringify(listado));
+
+
+//RECUPERAR ARRAY DEL LOCALSTORAGE
+
+const array_recuperado = JSON.parse(localStorage.getItem("listaProductos"))
+console.log("++++++ array recuperado ++++++")
+console.log(array_recuperado)
