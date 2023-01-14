@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="button"] {
+    border-radius: 10px;
+    background-color: rgb(43, 0, 255);
+    color: white;
+    border-color: black;
+    width: 10rem;
+    height: 5rem;
+    font-size: 3rem;
+}
+
+input[type="text"] {
+    border-radius: 10px;
+    text-align: right;
+    background-color: black;
+    color: greenyellow;
+    border-color: white;
+    width: 30rem;
+    height: 5rem;
+    font-size: 5rem;
+}
+.title {
+    font-size: 4rem;
+    color: blue;
+}
+
+table {
+    border-style: hidden;
+}

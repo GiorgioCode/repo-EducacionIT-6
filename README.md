@@ -32,6 +32,12 @@ Material desarrollado para el curso "JavaScript desde Cero" de EducaciónIT
 
 ---
 
+# CLASE 05 - Arreglos, Matrices y Eventos
+
+[![VER CODIGO](https://tutoriasjs.netlify.app/boton_vercodigo.png)](https://github.com/GiorgioCode/repo-EducacionIT-6/tree/main/CLASE_05) [![DESCARGAR PRESENTACIÓN](https://raw.githubusercontent.com/GiorgioCode/repo-educacionIT-finde/main/boton_diapositiva.png?token=GHSAT0AAAAAABYJWQ5N6CK2LUWKAMIMLJQCYZRBTFA)](https://github.com/GiorgioCode/repo-EducacionIT-6/blob/main/CLASE_05/CLASE5_JSDC_J_PAEZ.pptx?raw=true)
+
+---
+
 ![HEADER](https://raw.githubusercontent.com/GiorgioCode/repo-educacionIT-semana/main/material_adicional.jpg)
 
 Material recomendado para repaso de conceptos de HTML:

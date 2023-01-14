@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 4</title>
+</head>
+
+<body>
+    <h1 id="titulo_principal">Clase 4 - ARREGLOS, MATRICES, OBJETOS Y EVENTOS</h1>
+
+    <span id="contenedorDatos"></span>
+
+    <hr>
+
+    <p>Al mover el mouse dentro del rectangulo, se muestran las coordenadas del mouse</p>
+    <div id="coordiv" style="width:199px;height:99px;border:2px solid" onmousemove=funcionCoordenadas(event)
+        onmouseout=limpiarCoordenadas()></div>
+    <p id="textoCoordenadas"></p>
+
+    <hr>
+
+    <h3 id="fechayhora">Aqui veremos la fecha y hora actual</h3>
+    <button type="button" onclick=mostrarFecha()>Mostrar Fecha y Hora</button>
+
+
+    <hr>
+
+    <button id="btnPrincipal">CLICK</button>
+
+    <hr>
+
+    <form id="formulario">
+        <input type="text" placeholder="inserte nombre">
+        <input type="number" placeholder="inserte edad">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <hr>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
