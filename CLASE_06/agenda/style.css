@@ -1,0 +1,9 @@
+.separador {
+  height: 7rem;
+}
+
+.filtrar {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}

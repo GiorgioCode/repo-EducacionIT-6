@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+}
+
+.tarjeta {
+    border: 2px;
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    margin: 2rem;
+    border-radius: 10px;
+}
+
+.sinStock {
+    color: white;
+    text-align: right;
+    margin: 0.5rem;
+    background-color: brown;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.Titulo {
+    color: white;
+    text-align: center;
+    margin: 0.5rem;
+    background-color: blueviolet;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 350px;
+}
+.imagen {
+    margin: auto;
+    width: 100%;
+}

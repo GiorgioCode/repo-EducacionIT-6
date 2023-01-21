@@ -1,0 +1,9 @@
+.card {
+    height: 620px;
+    border: blueviolet;
+    border-style: solid;
+    margin: 1rem;
+}
+img {
+    max-height: 300px;
+}
