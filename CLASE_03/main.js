@@ -1,82 +1,111 @@
-console.log("############################################### ")
-console.log("##############  Interaccion con HTML   ######## ")
-console.log("############################################### ")
+/**
+ * ============================================
+ * INTERACCIÓN CON EL DOM Y MANEJO DE FECHAS
+ * ============================================
+ * Este archivo muestra ejemplos de manipulación del DOM y uso del objeto Date
+ * para crear interfaces dinámicas basadas en fechas y horas.
+ */
 
-//getElementById
-var titulo = document.getElementById("titulo")
-titulo.className = "fondo_azul letra_grande_blanca"
+// ============================================
+// MÉTODOS DE SELECCIÓN DEL DOM
+// ============================================
 
-//getElementsByClassName
-var fruta = document.getElementsByClassName("fruta")
-console.log(fruta)
-fruta[0].className = "estilo_fruta"
+// 1. getElementById - Selecciona un elemento por su ID
+const titulo = document.getElementById("titulo");
+titulo.className = "fondo_azul letra_grande_blanca";
 
-//getElementsByTagName
-var item_lista = document.getElementsByTagName("li")
-item_lista[3].className = "estilo_fruta"
-
-//querySelectorAll
-var items_lista = document.querySelectorAll(".fruta")
-items_lista.innerText = "estilo_fruta"
-console.log(items_lista)
-
-//innerText
-var titulo_principal = document.getElementById("titulo_principal")
-titulo_principal.innerText = "Hola EducacionIT!"
-
-//value
-document.getElementById("nombre").value = "pepe"
-
-// Crear nodo de tipo Elemento, etiqueta p
-var parrafo = document.createElement("p");
-// Insertar HTML interno
-parrafo.innerHTML = "<h2>¡Hola Estudiantes de JavaScript!</h2>"; 
-// Añadir el nodo Element como hijo de body
-document.body.append(parrafo);
-
-//****************CLASE DATE ************** */
-//EJEMPLO CREACION DE OBJETO DATE
-
-var fecha = new Date();
-var dia = fecha.getDay();
-var fecha_completa = fecha.getDate() + "/" + fecha.getMonth() + "/" + fecha.getFullYear();
-console.log(fecha_completa);
-
-// EJEMPLO CON ELSE IF
-
-var hora = new Date().getHours();
-if (hora <= 13) {
-    document.getElementById("mensaje1").innerHTML = "Buenos dias!";
-} else if (hora > 13 && hora <=20) {
-    document.getElementById("mensaje1").innerHTML = "Buenas tardes!";
-} else if (hora > 20 && hora <=23) {
-    document.getElementById("mensaje1").innerHTML = "Buenas tardes!";
+// 2. getElementsByClassName - Selecciona múltiples elementos por clase
+// Retorna una HTMLCollection (similar a un array)
+const frutas = document.getElementsByClassName("fruta");
+console.log('Elementos con clase "fruta":', frutas);
+if (frutas.length > 0) {
+    frutas[0].className = "estilo_fruta";
 }
 
-// EJEMPLO CON SWITCH y CLASE DATE
-var mensaje2 = document.getElementById("mensaje2")
-switch (dia) {
-    case 0:
-        mensaje2.innerText = "que buen domingo para hacer un asado"
+// 3. getElementsByTagName - Selecciona elementos por etiqueta
+const itemsLista = document.getElementsByTagName("li");
+if (itemsLista.length > 3) {
+    itemsLista[3].className = "estilo_fruta";
+}
+
+// 4. querySelectorAll - Versátil selector CSS que devuelve NodeList
+const elementosFruta = document.querySelectorAll(".fruta");
+console.log('Elementos seleccionados con querySelectorAll:', elementosFruta);
+
+// ============================================
+// MANIPULACIÓN DE CONTENIDO
+// ============================================
+
+// Modificar texto de un elemento
+const tituloPrincipal = document.getElementById("titulo_principal");
+tituloPrincipal.innerText = "¡Hola EducaciónIT!";
+
+// Modificar valor de un campo de formulario
+document.getElementById("nombre").value = "pepe";
+
+// Crear y añadir un nuevo elemento al DOM
+const parrafo = document.createElement("p");
+parrafo.innerHTML = "<h2>¡Hola Estudiantes de JavaScript!</h2>";
+document.body.append(parrafo);
+
+// ============================================
+// MANEJO DE FECHAS CON EL OBJETO DATE
+// ============================================
+
+// Crear una nueva instancia de Date
+const fechaActual = new Date();
+const diaSemana = fechaActual.getDay(); // 0 (domingo) a 6 (sábado)
+const diaMes = fechaActual.getDate();    // Día del mes (1-31)
+const mes = fechaActual.getMonth() + 1;  // Mes (0-11) → sumamos 1 para 1-12
+const anio = fechaActual.getFullYear();  // Año en 4 dígitos
+
+// Formatear fecha como dd/mm/aaaa
+const fechaFormateada = `${diaMes}/${mes}/${anio}`;
+console.log('Fecha actual:', fechaFormateada);
+
+// ============================================
+// EJEMPLO CON CONDICIONALES Y HORAS
+// ============================================
+
+const horaActual = new Date().getHours(); // Hora actual (0-23)
+const mensaje1 = document.getElementById("mensaje1");
+
+if (horaActual <= 13) {
+    mensaje1.innerHTML = "¡Buenos días!";
+} else if (horaActual > 13 && horaActual <= 20) {
+    mensaje1.innerHTML = "¡Buenas tardes!";
+} else {
+    mensaje1.innerHTML = "¡Buenas noches!";
+}
+
+// ============================================
+// EJEMPLO CON SWITCH Y DÍAS DE LA SEMANA
+// ============================================
+
+const mensaje2 = document.getElementById("mensaje2");
+
+switch (diaSemana) {
+    case 0: // Domingo
+        mensaje2.innerText = "¡Qué buen domingo para hacer un asado!";
         break;
-    case 1:
-        mensaje2.innerText = "Hoy es LUNES! hoy tenemos clase de JavaScript!"
+    case 1: // Lunes
+        mensaje2.innerText = "¡Hoy es LUNES! ¡Tenemos clase de JavaScript!";
         break;
-    case 2:
-        mensaje2.innerText = "que buen MARTES para estudiar JavaScript"
+    case 2: // Martes
+        mensaje2.innerText = "¡Qué buen MARTES para estudiar JavaScript!";
         break;
-    case 3:
-        mensaje2.innerText = "Hoy es MIERCOLES! hoy tenemos clase de JavaScript!"
+    case 3: // Miércoles
+        mensaje2.innerText = "¡Hoy es MIÉRCOLES! ¡Clase de JavaScript!";
         break;
-    case 4:
-        mensaje2.innerText = "que buen JUEVES para estudiar JavaScript"
+    case 4: // Jueves
+        mensaje2.innerText = "¡Qué buen JUEVES para seguir aprendiendo JavaScript!";
         break;
-    case 5:
-        mensaje2.innerText = "que buen VIERNES para finalizar la semana"
+    case 5: // Viernes
+        mensaje2.innerText = "¡Qué buen VIERNES para finalizar la semana con código!";
         break;
-    case 6:
-        mensaje2.innerText = "Hoy es SABADO! estamos en fin de semana"
+    case 6: // Sábado
+        mensaje2.innerText = "¡Hoy es SÁBADO! Disfruta tu fin de semana.";
         break;
     default:
-        break;
+        mensaje2.innerText = "¡Bienvenido a la clase de JavaScript!";
 }
