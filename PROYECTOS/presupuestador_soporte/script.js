@@ -1,108 +1,96 @@
-// --- Selectores ---
-const form = document.getElementById('budgetForm');
+// SELECTORES DE ELEMENTOS AL DOM
+const form = document.getElementById("budgetForm");
 const serviceCheckboxes = document.querySelectorAll('input[name="service"]');
-const hoursInput = document.getElementById('hours');
-const urgentCheckbox = document.getElementById('urgent');
-const summaryList = document.getElementById('summaryList');
-const totalPriceEl = document.getElementById('totalPrice');
-const whatsappBtn = document.getElementById('whatsappBtn');
-const printBtn = document.getElementById('printBtn');
+const hoursInput = document.getElementById("hours");
+const urgentCheckbox = document.getElementById("urgent");
+const summaryList = document.getElementById("summaryList");
+const totalPriceEl = document.getElementById("totalPrice");
+const whatsappBtn = document.getElementById("whatsappBtn");
+const printBtn = document.getElementById("printBtn");
 
-// --- Constantes ---
+//CONSTANTE
+
 const PRICE_PER_HOUR = 10000;
 
-// --- Funciones ---
-
+//FUNCIONES
 function calculateBudget() {
-    let total = 0;
-    let summaryHTML = '';
+    let total = 0; //tipo numerico
+    let summaryHTML = "";
 
-    // 1. Sumar servicios seleccionados
-    serviceCheckboxes.forEach(checkbox => {
+    serviceCheckboxes.forEach((checkbox) => {
         if (checkbox.checked) {
-            const price = parseInt(checkbox.value);
-            const label = checkbox.getAttribute('data-label');
+            const price = parseInt(checkbox.value); //para evitar concatenar al sumar
+            const label = checkbox.getAttribute("data-label");
 
-            total += price;
-            summaryHTML += `<li><span>${label}</span> <span>$${price}</span></li>`;
+            total += price; // lo mismo que decir total = total + price
+            summaryHTML += `<li><span>${label}</span> <span>$ ${price}</span></li>`;
         }
     });
-
-    // 2. Sumar horas adicionales
+    //sumar horas adicionales
     const hours = parseInt(hoursInput.value) || 0;
     if (hours > 0) {
         const hoursCost = hours * PRICE_PER_HOUR;
         total += hoursCost;
-        summaryHTML += `<li><span>${hours} Horas extra</span> <span>$${hoursCost}</span></li>`;
+        summaryHTML += `<li><mark>${hours} horas extra</mark> <mark>$ ${hoursCost}</mark></li>`;
     }
 
-    // 3. Aplicar urgencia (si está marcado)
+    //aplicar recargo por urgencia
     if (urgentCheckbox.checked) {
-        const surcharge = total * 0.20; // 20% extra
-        total += surcharge;
-        summaryHTML += `<li style="color: #e74c3c;"><span>Urgencia (+20%)</span> <span>$${surcharge.toFixed(0)}</span></li>`;
+        const multiplier = +urgentCheckbox.value; //capturo el value del checkbox de recargo
+        const surcharge = total * 0.2; //recargo para mostrar en el HTML
+        total *= multiplier; //total = total * multiplier
+        summaryHTML += `<li><mark>20% Recargo por urgencia</mark> <mark>$ ${surcharge}</mark></li>`;
     }
 
-    // 4. Actualizar HTML
-    if (summaryHTML === '') {
-        summaryList.innerHTML = '<li>Ningún servicio seleccionado.</li>';
+    //ACTUALIZAR HTML
+    if (summaryHTML === "") {
+        summaryList.innerHTML = "<li>No hay servicios seleccionados</li>";
     } else {
         summaryList.innerHTML = summaryHTML;
     }
-
-    totalPriceEl.textContent = '$' + total.toFixed(0);
+    totalPriceEl.textContent = "$ " + total.toFixed(0);
 }
 
 function sendToWhatsApp() {
     const total = totalPriceEl.textContent;
-
-    // Obtener fecha actual
     const today = new Date();
-    const fechaPresupuesto = today.toLocaleDateString('es-AR', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
+    const fechaPresupuesto = today.toLocaleDateString("es-AR", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
     });
-
-    // Calcular fecha de vencimiento (20 días desde hoy)
+    const valid = 20; //dias de presupuesto valido
     const expirationDate = new Date(today);
-    expirationDate.setDate(today.getDate() + 20);
-    const fechaVencimiento = expirationDate.toLocaleDateString('es-AR', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
+    expirationDate.setDate(today.getDate() + valid);
+
+    const fechaVencimiento = expirationDate.toLocaleDateString("es-AR", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
     });
 
-    let message = `Hola! muchas gracias por confiar en nuestro servicio!! le enviamos el presupuesto de fecha ${fechaPresupuesto}, con vigencia de 20 dias desde hoy (hasta el ${fechaVencimiento}):\n\n`;
-
-    // Recorremos los items del resumen para armar el mensaje
-    const items = summaryList.querySelectorAll('li');
-    items.forEach(item => {
-        const text = item.innerText.replace('\n', ': '); // Formato "Servicio: $Precio"
+    let message = `Hola!! muchas gracias por confiar en nuestro servicio!! \n Le enviamos el presupuesto de fecha ${fechaPresupuesto}, con vigencia de 20 dias desde hoy (hasta el ${fechaVencimiento}): \n\n`;
+    const items = summaryList.querySelectorAll("li");
+    items.forEach((item) => {
+        const text = item.innerText.replace("\n", ": ");
         message += `- ${text}\n`;
     });
+    message += `\n *Total estimado: ${total}*`;
+    message += `\n Vinculo de pago: http://link.mercadopago.com.ar/nnnn`;
 
-    message += `\n*Total Estimado: ${total}*`;
-
-    // Codificamos el mensaje para URL
     const encodedMessage = encodeURIComponent(message);
 
-    // Abrimos WhatsApp (usamos un número de ejemplo o dejamos vacío para que el usuario elija)
-    window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/?text=${encodedMessage}`, "_blank");
+    console.log(message);
 }
 
-// --- Eventos ---
+//EVENTOS
+form.addEventListener("change", calculateBudget);
+hoursInput.addEventListener("input", calculateBudget);
 
-// Escuchamos cambios en cualquier parte del formulario para recalcular en tiempo real
-form.addEventListener('change', calculateBudget);
-// También escuchamos el input de horas mientras se escribe
-hoursInput.addEventListener('input', calculateBudget);
-
-whatsappBtn.addEventListener('click', sendToWhatsApp);
-
-printBtn.addEventListener('click', () => {
+whatsappBtn.addEventListener("click", sendToWhatsApp);
+printBtn.addEventListener("click", () => {
     window.print();
 });
 
-// Calcular al inicio por si hay valores por defecto
 calculateBudget();
