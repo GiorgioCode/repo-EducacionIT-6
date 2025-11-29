@@ -1,0 +1,92 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables de colores (Tema Claro por defecto) */
+:root {
+    --bg-color: #e0e7ff;
+    --card-bg: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --accent-color: #4f46e5;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Tema Oscuro */
+body.dark-mode {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent-color: #818cf8;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Cuerpo centrado */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tarjeta del reloj */
+.clock-container {
+    background-color: var(--card-bg);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    position: relative;
+    min-width: 350px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hora grande */
+.time {
+    font-size: 64px;
+    font-weight: bold;
+    color: var(--text-primary);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-variant-numeric: tabular-nums;
+    /* Evita que los números salten */
+}
+
+/* Fecha */
+.date {
+    font-size: 18px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Botón de tema */
+.theme-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .theme-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}

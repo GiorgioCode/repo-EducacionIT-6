@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <h1>Mis Tareas</h1>
+
+        <!-- Formulario -->
+        <form id="form" class="input-group">
+            <input type="text" id="taskInput" placeholder="¿Qué tienes que hacer hoy?" autocomplete="off">
+            <button type="submit" class="add-btn">Agregar</button>
+        </form>
+
+        <!-- Lista de tareas -->
+        <ul id="tasksList">
+            <!-- Aquí se insertarán las tareas con JS -->
+        </ul>
+
+        <!-- Mensaje cuando no hay tareas -->
+        <div id="emptyMessage" class="empty-message">
+            No hay tareas pendientes. ¡Agrega una!
+        </div>
+
+        <!-- Pie de página -->
+        <div class="footer">
+            <span id="count">0 pendientes</span>
+
+            <div class="footer-actions">
+                <button id="clearCompleted" class="text-btn">Borrar completadas</button>
+                <button id="clearAll" class="text-btn">Borrar todo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

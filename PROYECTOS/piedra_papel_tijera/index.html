@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>🎮 Piedra, Papel o Tijera</h1>
+
+        <!-- Área de selección -->
+        <div class="choices">
+            <button class="choice-btn" data-choice="piedra">✊</button>
+            <button class="choice-btn" data-choice="papel">✋</button>
+            <button class="choice-btn" data-choice="tijera">✌️</button>
+        </div>
+
+        <!-- Resultado del juego -->
+        <div class="result-container">
+            <div class="result-text" id="resultText">¡Elige tu jugada!</div>
+            <div class="choices-made" id="choicesMade"></div>
+        </div>
+
+        <!-- Marcador -->
+        <div class="scoreboard">
+            <div class="score-item">
+                <span class="score-label">Jugador</span>
+                <span class="score-value" id="playerScore">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">Empates</span>
+                <span class="score-value" id="tieScore">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">Computadora</span>
+                <span class="score-value" id="computerScore">0</span>
+            </div>
+        </div>
+
+        <!-- Botón de reinicio -->
+        <button class="btn btn-reset" id="resetBtn">Reiniciar Marcador</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuestador de Soporte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>💻 Soporte Técnico</h1>
+            <p>Calcula el costo estimado de tu reparación o mantenimiento.</p>
+        </header>
+
+        <form id="budgetForm">
+            <!-- Sección de Servicios -->
+            <div class="section">
+                <h2>🛠️ Software y Sistema</h2>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="service" value="15000" data-label="Limpieza de Virus/Malware">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Limpieza de Virus/Malware ($15.000)</span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="service" value="25000"
+                            data-label="Formateo e Instalación SO + Drivers">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Formateo e Instalación SO + Drivers ($25.000)</span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="service" value="12000" data-label="Optimización de Sistema Lento">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Optimización de Sistema Lento ($12.000)</span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="service" value="10000"
+                            data-label="Instalación de Pack de Programas">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Instalación de Pack de Programas ($10.000)</span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="service" value="30000"
+                            data-label="Recuperación de Datos (Software)">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Recuperación de Datos (Software) ($30.000)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔧 Hardware y Mantenimiento</h2>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="service" value="20000"
+                            data-label="Limpieza Física Completa (PC/Notebook)">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Limpieza Física Completa ($20.000)</span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="service" value="15000" data-label="Cambio de Pasta Térmica">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Cambio de Pasta Térmica ($15.000)</span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="service" value="15000"
+                            data-label="Instalación de Disco SSD (Mano de obra)">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Instalación de Disco SSD (Mano de obra) ($15.000)</span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="service" value="10000"
+                            data-label="Ampliación de Memoria RAM (Mano de obra)">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Ampliación de Memoria RAM (Mano de obra) ($10.000)</span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="service" value="25000"
+                            data-label="Cambio de Pantalla Notebook (Mano de obra)">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Cambio de Pantalla Notebook (Mano de obra) ($25.000)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🌐 Redes y Otros</h2>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="service" value="15000" data-label="Configuración de Router/WiFi">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Configuración de Router/WiFi ($15.000)</span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="service" value="12000"
+                            data-label="Configuración de Impresora en Red">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Configuración de Impresora en Red ($12.000)</span>
+                    </label>
+
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="service" value="15000"
+                            data-label="Backup de Información (hasta 100GB)">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Backup de Información (hasta 100GB) ($15.000)</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Sección de Extras -->
+            <div class="section">
+                <h2>Extras</h2>
+                <div class="input-group">
+                    <label for="hours">Horas adicionales de mano de obra ($10.000/h):</label>
+                    <input type="number" id="hours" min="0" value="0">
+                </div>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="urgent" value="1.2"> <!-- 20% extra -->
+                        <span class="checkmark"></span>
+                        <span class="label-text">Servicio de Urgencia (+20%)</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Resumen -->
+            <div class="summary">
+                <h3>Resumen del Presupuesto</h3>
+                <ul id="summaryList">
+                    <li>Ningún servicio seleccionado.</li>
+                </ul>
+                <div class="total-row">
+                    <span>Total Estimado:</span>
+                    <span id="totalPrice">$0</span>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button type="button" id="printBtn" class="btn-secondary">Imprimir</button>
+                <button type="button" id="whatsappBtn" class="btn-primary">Enviar por WhatsApp</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

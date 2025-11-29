@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Propinas</title>
+  <!-- Vinculamos el archivo CSS externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Calculadora de Propinas</h1>
+
+    <!-- Inputs -->
+    <div class="input-group">
+      <input type="number" id="amount" placeholder="Monto de la cuenta ($)" min="0" step="0.01">
+    </div>
+
+    <div class="input-group">
+      <input type="number" id="tipPercent" placeholder="Propina %" min="0">
+      <input type="number" id="people" placeholder="Personas" value="1" min="1">
+    </div>
+
+    <!-- Botones rápidos -->
+    <div class="quick-tips">
+      <button class="btn-tip" data-tip="10">10%</button>
+      <button class="btn-tip" data-tip="15">15%</button>
+      <button class="btn-tip" data-tip="20">20%</button>
+      <button class="btn-tip" data-tip="25">25%</button>
+    </div>
+
+    <!-- Resultados -->
+    <div class="results">
+      <div class="result-row">
+        <span>Propina Total:</span>
+        <span id="tipTotal">-</span>
+      </div>
+      <div class="result-row">
+        <span>Por Persona:</span>
+        <span id="perPerson">-</span>
+      </div>
+      <div class="result-row">
+        <span>Total Factura:</span>
+        <span id="totalBill">-</span>
+      </div>
+    </div>
+
+    <!-- Acciones -->
+    <div class="actions">
+      <button id="calculate" class="btn-primary">Calcular</button>
+      <button id="reset" class="btn-secondary">Resetear</button>
+    </div>
+
+    <p class="footer-note">Ingresa el monto y selecciona la propina.</p>
+  </div>
+
+  <!-- Vinculamos el archivo JS externo -->
+  <script src="script.js"></script>
+</body>
+
+</html>

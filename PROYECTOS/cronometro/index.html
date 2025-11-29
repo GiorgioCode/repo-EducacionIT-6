@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>⏱️ Cronómetro</h1>
+
+        <!-- Display del tiempo -->
+        <div class="timer-display" id="timerDisplay">00:00:00</div>
+
+        <!-- Botones de control -->
+        <div class="controls">
+            <button class="btn btn-start" id="startBtn">Iniciar</button>
+            <button class="btn btn-pause" id="pauseBtn" disabled>Pausar</button>
+            <button class="btn btn-reset" id="resetBtn">Reiniciar</button>
+            <button class="btn btn-lap" id="lapBtn" disabled>Vuelta</button>
+        </div>
+
+        <!-- Lista de vueltas -->
+        <div class="laps-container">
+            <h3>Vueltas:</h3>
+            <div class="laps" id="lapsList">
+                <span class="laps-empty">No hay vueltas registradas</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

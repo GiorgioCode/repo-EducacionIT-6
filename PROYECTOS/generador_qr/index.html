@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Códigos QR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>📱 Generador de Códigos QR</h1>
+
+        <!-- Área de entrada -->
+        <div class="input-container">
+            <label for="textInput">Ingresa texto o URL:</label>
+            <textarea id="textInput" placeholder="https://ejemplo.com o cualquier texto..." rows="4"></textarea>
+        </div>
+
+        <!-- Opciones de tamaño -->
+        <div class="size-container">
+            <label for="sizeSelect">Tamaño del código QR:</label>
+            <select id="sizeSelect">
+                <option value="128">Pequeño (128x128)</option>
+                <option value="256" selected>Mediano (256x256)</option>
+                <option value="512">Grande (512x512)</option>
+            </select>
+        </div>
+
+        <!-- Botón para generar -->
+        <button class="btn btn-generate" id="generateBtn">Generar Código QR</button>
+
+        <!-- Área del código QR -->
+        <div class="qr-container" id="qrContainer">
+            <div class="qr-placeholder">El código QR aparecerá aquí</div>
+        </div>
+
+        <!-- Botón para descargar -->
+        <button class="btn btn-download" id="downloadBtn" style="display: none;">Descargar Código QR</button>
+    </div>
+
+    <!-- Librería QRCode.js desde CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+/* Reset básico: elimina márgenes y rellenos por defecto */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos generales del cuerpo */
+body {
+  font-family: system-ui, sans-serif; /* Fuente del sistema, moderna y limpia */
+  background-color: #f0f4f8; /* Color de fondo suave */
+  color: #333; /* Color de texto oscuro para buen contraste */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  min-height: 100vh; /* Altura mínima de toda la pantalla */
+  padding: 20px;
+}
+
+/* Tarjeta principal */
+.card {
+  background-color: white;
+  width: 100%;
+  max-width: 400px; /* Ancho máximo para que no se vea muy ancha en pantallas grandes */
+  padding: 24px;
+  border-radius: 16px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Título */
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Filas de inputs */
+.input-group {
+  margin-bottom: 16px;
+  display: flex;
+  gap: 10px; /* Espacio entre elementos */
+}
+
+/* Estilos de los inputs */
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none; /* Quita el borde azul al seleccionar */
+  transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #3b82f6; /* Color azul al escribir */
+}
+
+/* Botones de porcentaje rápido */
+.quick-tips {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 8px;
+}
+
+.btn-tip {
+  flex: 1; /* Ocupan el mismo ancho */
+  padding: 8px;
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #475569;
+  transition: background-color 0.2s;
+}
+
+.btn-tip:hover {
+  background-color: #cbd5e1;
+}
+
+/* Sección de resultados */
+.results {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.result-row:last-child {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 18px;
+  color: #3b82f6;
+}
+
+/* Botones de acción */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primary {
+  flex: 2; /* El botón calcular es más grande */
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+
+.btn-secondary {
+  flex: 1;
+  background-color: transparent;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #f1f5f9;
+}
+
+/* Nota al pie */
+.footer-note {
+  text-align: center;
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 16px;
+}

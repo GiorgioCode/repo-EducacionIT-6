@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Número Secreto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Adivina el Número</h1>
+        <p class="description">Estoy pensando un número entre <strong>1 y 100</strong>.</p>
+
+        <!-- Controles -->
+        <div class="controls">
+            <input type="number" id="guessInput" placeholder="?" min="1" max="100">
+            <button id="guessBtn" class="btn-primary">Probar</button>
+            <button id="newBtn" class="btn-secondary">Nuevo</button>
+        </div>
+
+        <!-- Mensaje de feedback -->
+        <div id="message" class="message"></div>
+
+        <!-- Historial -->
+        <div class="history-container">
+            <strong>Tus intentos:</strong>
+            <ul id="historyList" class="history-list">
+                <!-- Aquí se agregarán los números intentados -->
+            </ul>
+        </div>
+
+        <div class="footer">
+            Pista: Te diré si es más alto o más bajo.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

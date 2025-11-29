@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dado Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>🎲 Dado Digital</h1>
+
+        <!-- Contenedor del dado -->
+        <div class="dice-container">
+            <div class="dice" id="dice">
+                <div class="dice-face" id="diceFace">1</div>
+            </div>
+        </div>
+
+        <!-- Historial de tiradas -->
+        <div class="history-container">
+            <h3>Historial de tiradas:</h3>
+            <div class="history" id="history">
+                <span class="history-empty">Aún no has lanzado el dado</span>
+            </div>
+        </div>
+
+        <!-- Botones -->
+        <button class="btn btn-large" id="rollBtn">🎲 Lanzar Dado</button>
+        <button class="btn btn-clear" id="clearBtn">Limpiar Historial</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

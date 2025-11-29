@@ -1,0 +1,146 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cuerpo: centrado y fondo suave */
+body {
+    font-family: system-ui, sans-serif;
+    background-color: #f3f4f6;
+    /* Gris muy claro */
+    color: #1f2937;
+    /* Gris oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Tarjeta del juego */
+.card {
+    background-color: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    /* Todo centrado */
+}
+
+/* Título */
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+/* Texto descriptivo */
+.description {
+    color: #6b7280;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Controles: input y botones */
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    width: 120px;
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="number"]:focus {
+    border-color: #10b981;
+    /* Verde al enfocar */
+}
+
+/* Botones */
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-primary {
+    background-color: #10b981;
+    /* Verde esmeralda */
+    color: white;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #e5e7eb;
+    color: #4b5563;
+}
+
+.btn-secondary:hover {
+    background-color: #f9fafb;
+    border-color: #d1d5db;
+}
+
+/* Mensaje de resultado */
+.message {
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 30px;
+    /* Para que no salte el contenido */
+    margin-bottom: 20px;
+    color: #374151;
+}
+
+/* Historial de intentos */
+.history-container {
+    text-align: left;
+    background-color: #f9fafb;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.history-list {
+    list-style: none;
+    /* Sin puntos */
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Si hay muchos, bajan de línea */
+    gap: 8px;
+}
+
+.history-item {
+    background-color: #e5e7eb;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* Pie de página */
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #9ca3af;
+}
